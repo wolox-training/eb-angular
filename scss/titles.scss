@@ -1,0 +1,17 @@
+.title-container { 
+  background-image: url("assets/download.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100px;
+  justify-content: flex-end;
+  max-height: 100%; 
+  max-width: 100%;
+  width: 225px;
+  
+  .title {
+      align-self: center;
+      color: $black-color;
+      font-size: 1.5em;
+   }
+}
+
