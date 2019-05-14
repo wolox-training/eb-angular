@@ -1,17 +1,20 @@
-.title-container { 
-  background-image: url("assets/download.svg");
-  background-repeat: no-repeat;
+.title {
+  align-items: center;
   display: flex;
-  height: 100px;
-  justify-content: flex-end;
-  max-height: 100%; 
-  max-width: 100%;
-  width: 225px;
-  
-  .title {
-      align-self: center;
-      color: $black-color;
-      font-size: 1.5em;
-   }
+  font-size: $text-big;
+  height: $title-decoration-height;
+  padding-left: $title-padding-left;
+  position: relative;
+  width: 100%;
+   
+  &::before {
+    background-image: url("assets/triangle.svg");
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    width: $title-decoration-width;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
 }
-
