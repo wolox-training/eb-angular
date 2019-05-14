@@ -1,35 +1,44 @@
 .tech { 
-   display: flex;
-   background-color: $green;
-   flex-direction: column;
-   align-items: center;
-   box-shadow: -5px -5px red;
-   border-radius: 5px;
-   margin-left: 10px;
-   padding: 30px;
-   width: 200px;
-   height: 300px;
+  align-items: center; 
+  background-color: $green; 
+  display: flex;
+  flex-direction: column;
+  padding: $tech-padding ;
+  position: relative;
+  @extend %tech-container-size;
 
   .tech-logo {
-    width: $tech-logo-size;
     height: $tech-logo-size;
-    margin-bottom: 5px;
+    margin-bottom: $tech-margin;
+    width: $tech-logo-size;
   }
 
   .tech-title {
-    font-size: $text-medium;
-    margin: 5px 0;
+    font-size: $text-medium 0;
+    margin: $tech-margin;
   }
 
   .tech-release {
     font-size: $text-small;
-    margin: 5px 0;
+    margin: $tech-margin 0;
   }
 
-  .tech-text{
-    justify-content: center;
+  .tech-text { 
     font-size: $text-small;
+    justify-content: center;
+    margin-top: $tech-margin;
     text-align: center;
-    margin-top: 5px;
+  }
+
+  &::before {
+    background-color: $white;
+    border: 1px solid $green;
+    bottom: $tech-border-size;
+    content: "";
+    position: absolute;
+    right: $tech-border-size;
+    z-index: -1;
+    @extend %tech-container-size;
   }
 }
+
