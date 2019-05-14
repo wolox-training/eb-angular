@@ -12,9 +12,9 @@
     background-repeat: no-repeat;
     content: "";
     height: 100%;
-    width: $title-decoration-width;
-    position: absolute;
     left: 0;
+    position: absolute;
+    width: $title-decoration-width;
     z-index: -1;
   }
 }
