@@ -6,40 +6,47 @@
   margin: 20px;
   padding: 25px;
   position: relative;
-  @extend %tech-container-size;
+  border-radius: 5px;
+  height: 100%;
+  max-height: 300px;
+  max-width: 200px;
+  width: 100%;
 
   .tech-logo {
     height: $tech-logo-size;
-    margin-bottom: $tech-margin;
+    margin-bottom: 5px;
     width: $tech-logo-size;
   }
 
   .tech-title {
-    font-size: $text-medium 0;
-    margin: $tech-margin;
+    font-size: $text-medium;
+    margin: 5px;
   }
 
   .tech-release {
     font-size: $text-small;
     font-weight: bold;
-    margin: $tech-margin 0;
+    margin: 5px 0;
   }
 
   .tech-text { 
     font-size: $text-small;
     justify-content: center;
-    margin-top: $tech-margin;
+    margin-top: 5px;
     text-align: center;
   }
 
   &::before {
-    background-color: $white;
     border: 1px solid $green;
     bottom: 5px;
     content: "";
     position: absolute;
     right: 5px;
     z-index: -1;
-    @extend %tech-container-size;
+    border-radius: 5px;
+    height: 100%;
+    max-height: 300px;
+    max-width: 200px;
+    width: 100%;
   }
 }
