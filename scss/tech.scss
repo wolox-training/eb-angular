@@ -3,7 +3,7 @@
   background-color: $green; 
   display: flex;
   flex-direction: column;
-  padding: $tech-padding ;
+  padding: 30px;
   position: relative;
   @extend %tech-container-size;
 
@@ -34,10 +34,10 @@
   &::before {
     background-color: $white;
     border: 1px solid $green;
-    bottom: $tech-border-size;
+    bottom: 5px;
     content: "";
     position: absolute;
-    right: $tech-border-size;
+    right: 5px;
     z-index: -1;
     @extend %tech-container-size;
   }

@@ -3,16 +3,14 @@ $nav-logo-height: 30px;
 $title-decoration-height: 90px;
 $title-decoration-width: 70px;
 $title-padding-left: 50px;
-$tech-border-size: 5px;
 $tech-logo-size: 100px;
 $tech-margin: 5px;
-$tech-padding: 30px;
 %tech-container-size {
   border-radius: 5px;
-  height: 300px;
-  max-width: 100%;
-  max-height: 100%;
-  width: 200px;
+  height: 100%;
+  max-height: 300px;
+  max-width: 200px;
+  width: 100%;
 }
 $text-big: 24px;
 $text-medium: 16px;
