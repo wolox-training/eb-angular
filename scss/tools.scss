@@ -1,0 +1,12 @@
+.tools-section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    .techs {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+}

@@ -3,6 +3,7 @@
   background-color: $green; 
   display: flex;
   flex-direction: column;
+  margin: 20px;
   padding: $tech-padding ;
   position: relative;
   @extend %tech-container-size;
@@ -42,4 +43,4 @@
     @extend %tech-container-size;
   }
 }
-
+  
