@@ -42,7 +42,13 @@
     height: 100%;
     position: absolute;
     right: 5px;
+    transition: all 0,6s linear;
     width: 100%;
     z-index: -1;
+  }
+
+  &:hover:before {
+    right: -5px;
+    bottom: -5px;
   }
 }
