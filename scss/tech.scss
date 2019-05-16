@@ -47,7 +47,7 @@
     z-index: -1;
   }
 
-  &:hover:before {
+  &:hover::before {
     right: -5px;
     bottom: -5px;
   }
