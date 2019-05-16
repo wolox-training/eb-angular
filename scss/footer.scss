@@ -1,0 +1,26 @@
+.footer-page {
+    align-items: center;  
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+    
+  .footer-logo {
+    height: 100%;
+    margin: 10px;
+    max-height: 100px;
+  }
+  
+  .footer-title {
+    color: $white;
+    font-size: $text-medium;
+    margin: 10px;
+  }
+
+  .footer-text {
+    align-self: flex-end;
+    color: $white;
+    font-size: $text-small;
+    margin: 10px;
+  }
+}
