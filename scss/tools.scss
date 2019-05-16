@@ -1,16 +1,14 @@
-.tools{
-  padding: 100px;
-  
-  .tools-section {
+.tools-section {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto; 
+  max-width: 1000px; 
+  width: 100%;
+
+  .techs {
     display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    
-    .techs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      padding: 20px;
-    }
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
   }
 }
