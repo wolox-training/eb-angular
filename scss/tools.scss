@@ -1,12 +1,16 @@
-.tools-section {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
+.tools{
+  padding: 60px 100px;
   
-  .techs {
+  .tools-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 20px;
+    flex-direction: column;
+    margin: 20px 0;
+    
+    .techs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 20px;
+    }
   }
 }
