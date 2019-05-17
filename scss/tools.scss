@@ -6,8 +6,9 @@
   width: 100%;
 
   .techs {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     padding: 20px;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
   }
 }
