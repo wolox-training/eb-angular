@@ -25,7 +25,7 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: $medium-breakpoint) {
   .footer-page {
     .footer-logo {
       max-height: 30px;
