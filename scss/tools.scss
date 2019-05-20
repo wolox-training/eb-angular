@@ -12,3 +12,12 @@
     grid-template-columns: 2fr 1.5fr 1.5fr;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .tools-section{
+    .techs {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto; 
+    } 
+  }
+}

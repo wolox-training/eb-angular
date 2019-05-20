@@ -41,3 +41,10 @@
   justify-self: end;
   border-right: 1px solid $green;
 }
+
+@media only screen and (max-width: 1024px) {
+  .tech{
+    border-right: none;
+    border-bottom: 1px solid $green;
+  }
+}

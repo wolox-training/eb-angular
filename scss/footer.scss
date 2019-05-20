@@ -24,3 +24,15 @@
     margin: 10px;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .footer-page {
+    .footer-logo {
+      max-height: 30px;
+    }
+    .footer-text {
+      align-self: center;
+      margin-top: 30px;
+    }
+  }
+}

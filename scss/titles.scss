@@ -18,3 +18,15 @@
     z-index: -1;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .title{
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+
+    &::before {
+      position: relative;
+    }
+  }
+}
