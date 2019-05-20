@@ -20,13 +20,9 @@
 }
 
 @media only screen and (max-width: $medium-breakpoint) {
-  .title{
+  .title {
     justify-content: center;
     margin: auto;
-    padding: 0;
-
-    &::before {
-      position: relative;
-    }
+    width: 230px;
   }
 }
