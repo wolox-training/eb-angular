@@ -14,8 +14,7 @@
 
 @media only screen and (max-width: $medium-breakpoint) {
   .techs {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     margin: 20px auto; 
   }
 }
