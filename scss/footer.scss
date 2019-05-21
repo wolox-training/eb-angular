@@ -1,0 +1,24 @@
+.footer {
+  align-items: center;  
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  color: $white;
+  font-size: $text-medium;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  align-self: flex-end;
+  color: $white;
+  font-size: $text-small;
+}
