@@ -16,6 +16,15 @@
     margin: 20px 20px 10px 20px;
   }
 
+  .alert {
+    background-color: $red;
+    border-radius: 10px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+  }
+
   p { 
     font-size: 12px;
     letter-spacing: 8px

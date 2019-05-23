@@ -5,19 +5,19 @@
     <label class="label-input"> &nbsp;First name
       <input type="text"  class="register-input" formControlName="firstName">
     </label>
-    <div class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ titleAlert}}</div>
+    <div class="alert" class="alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">{{ titleAlert}}</div>
     <label class="label-input"> &nbsp;Last name
       <input type="text" class="register-input" formControlName="lastName">
     </label>
-    <div class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ titleAlert}}</div>
+    <div class="alert" class="alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">{{ titleAlert}}</div>
     <label class="label-input"> &nbsp;Email
       <input type="email" class="register-input" formControlName="email">
     </label>
-    <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Not email</div>
+    <div class="alert" class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Not email</div>
     <label class="label-input"> &nbsp;Password
       <input type="password" class="register-input" formControlName="password">
     </label>
-    <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">{{ titleAlert}}</div>
+    <div class="alert" class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">{{ titleAlert}}</div>
     <button type="submit"  class="btn" [disabled]="rForm.invalid">Sign up </button>
     <button type="button"  class="btn-login" >Login</button>
   </form>
