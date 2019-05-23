@@ -76,6 +76,16 @@
             "browserTarget": "ng5:build"
           }
         },
+        "options": {
+          "stylePreprocessorOptions": {
+            "includePaths": [
+              "src/sass"
+            ]
+          },
+          "styles": [
+            "src/sass/application.scss"
+          ]
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
