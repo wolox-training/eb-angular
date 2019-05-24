@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../components/user';
+import { User } from '../../models/user';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../../models/userService';
 
 @Component({
   selector: 'app-register',
@@ -17,8 +19,9 @@ export class RegisterComponent {
   password: string = '';
   titleAlert: String = 'This field is required';
   subTitle: String = 'BOOKS';
+  userService: UserService;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.rForm = fb.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
@@ -40,7 +43,7 @@ export class RegisterComponent {
             password: this.password,
             password_confirmation: this.password
           }
-  
-    console.log({user});
+    this.userService = new UserService();
+    this.userService.createUser(user, this.http);
   }
 }
