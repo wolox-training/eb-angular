@@ -10,7 +10,7 @@ export class UserService {
   createUser(user: User, http:HttpClient) {
     http.post<any>(this.URL_SERVICE + '/api/v1/users', {user}).toPromise()
       .then(res => {
-        console.log('succes')
+        console.log('201: Succes')
       })
       .catch(err => {
         console.log(err)
