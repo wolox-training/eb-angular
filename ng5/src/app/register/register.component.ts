@@ -7,7 +7,7 @@ import { User } from './user';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   rForm: FormGroup;
   post: any;
@@ -25,9 +25,6 @@ export class RegisterComponent implements OnInit {
       'email': [null, Validators.compose([Validators.required, Validators.email])],
       'password': [null, Validators.required],
     });
-  }
-
-  ngOnInit() {
   }
 
   register(post) {
