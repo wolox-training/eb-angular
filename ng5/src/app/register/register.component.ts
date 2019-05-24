@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   email: string = '';
   password: string = '';
   titleAlert: String = 'This field is required';
+  subTitle: String = 'BOOKS';
 
   constructor(private fb: FormBuilder) {
     this.rForm = fb.group({
@@ -23,7 +24,7 @@ export class RegisterComponent implements OnInit {
       'lastName': [null, Validators.required],
       'email': [null, Validators.compose([Validators.required, Validators.email])],
       'password': [null, Validators.required],
-    })
+    });
   }
 
   ngOnInit() {
@@ -34,9 +35,7 @@ export class RegisterComponent implements OnInit {
     this.lastName = post.lastName;
     this.email = post.email;
     this.password = post.password;
-
     let user: User;
-
     user = {email: this.email, 
             first_name: this.firstName, 
             last_name: this.lastName,
@@ -48,4 +47,3 @@ export class RegisterComponent implements OnInit {
     console.log({user});
   }
 }
-

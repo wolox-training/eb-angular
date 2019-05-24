@@ -13,7 +13,7 @@
 
   .logo {
     height: 40px;
-    margin: 20px 20px 10px 20px;
+    margin: 20px 20px 10px;
   }
 
   .alert {
@@ -25,9 +25,9 @@
     margin: 0 20px;
   }
 
-  p { 
+  .subtitle { 
     font-size: 12px;
-    letter-spacing: 8px
+    letter-spacing: 8px;
   }
 }
 
@@ -59,7 +59,6 @@
   border-radius: 10px;
   font-size: 15px;
   height: 40px;
-  margin: 2px;
   padding: 10px;
   position: relative;
 }
