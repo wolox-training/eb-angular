@@ -9,11 +9,11 @@ export class UserService {
 
   createUser(user: User, http:HttpClient) {
     http.post<any>(this.URL_SERVICE + '/api/v1/users', {user}).toPromise()
-            .then(res => {
-                console.log('succes')
-            })
-            .catch(err => {
-            console.log(err)
-            });
+      .then(res => {
+        console.log('succes')
+      })
+      .catch(err => {
+        console.log(err)
+      });
     }
 }
