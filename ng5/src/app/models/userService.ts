@@ -1,16 +1,16 @@
 import { User } from './user'; 
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment'
 
 export class UserService {
-  readonly URL_SERVICE = 'https://wbooks-api-stage.herokuapp.com';
+  
+  wBookAPI: string = environment.WBOOK_SERVICE + '/api/v1/users';
 
   createUser(user: User, http:HttpClient) {
-    http.post<any>(this.URL_SERVICE + '/api/v1/users', {user}).toPromise()
-      .then(res => {
+    http.post<any>(this.wBookAPI, {user})
+      .subscribe((res) => {
         console.log('201: Succes');
       })
-      .catch(err => {
-        console.log(err.error.error);
-      });
   }
 }
+ 
