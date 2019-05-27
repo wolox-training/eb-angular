@@ -30,6 +30,7 @@
 }
 
 .register-form {
+  border-bottom: 3px solid $grey-soft;
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -48,15 +49,4 @@
   font-size: 15px;
   height: 40px;
   padding: 10px;
-}
-
-.button-primary {
-  &::before {
-    border: 1px solid $grey-soft;
-    bottom: -16px;
-    content: "";
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
 }
