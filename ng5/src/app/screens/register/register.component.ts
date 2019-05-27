@@ -16,9 +16,8 @@ export class RegisterComponent {
   RequiredErrorAlert: String = 'This field is required';
   EmailErrorAlert: String = 'This is not an Email';
   PassErrorAlert: String = 'Password should be at least 6 characters.';
-  userService: UserService;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private userService: UserService) {
     this.rForm = fb.group({
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],
@@ -40,7 +39,6 @@ export class RegisterComponent {
                       password: post.password,
                       password_confirmation: post.password
                       }
-    this.userService = new UserService();
     this.userService.createUser(user, this.http);
   }
 }
