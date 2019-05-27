@@ -20,9 +20,7 @@
     background-color: $red;
     border-radius: 10px;
     color: $white;
-    display: flex;
     justify-content: center;
-    margin: 0 20px;
   }
 
   .subtitle { 
@@ -43,16 +41,6 @@
     font-size: 15px;
     margin: 10px;
   }
-
-  .btn-login {
-    border-radius: 10px;
-    background-color: $grey;
-    border: 3px solid $green;
-    color: $green;
-    font-weight: bold;
-    height: 40px;
-    margin: 10px;
-  }
 }
 
 .register-input {
@@ -60,17 +48,9 @@
   font-size: 15px;
   height: 40px;
   padding: 10px;
-  position: relative;
 }
 
-.btn {
-  background-color: $green;
-  border-radius: 10px;
-  color: $white;
-  height: 40px;
-  margin: 20px 10px;
-  position: relative;
-    
+.button-primary {
   &::before {
     border: 1px solid $grey-soft;
     bottom: -16px;
