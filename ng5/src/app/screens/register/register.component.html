@@ -4,19 +4,19 @@
   <form [formGroup]="rForm" class="register-form" (ngSubmit)="register(rForm.value)">
     <label class="label-input">First name</label>
     <input type="text"  class="register-input" formControlName="firstName">
-    <div class="alert" class="alert" *ngIf="firstName.invalid && firstName.touched">{{ RequiredErrorAlert}}</div>
+    <span class="alert" class="alert" *ngIf="firstName.invalid && firstName.touched">{{ RequiredErrorAlert}}</span>
 
     <label class="label-input">Last name</label>
     <input type="text" class="register-input" formControlName="lastName">
-    <div class="alert" class="alert" *ngIf="lastName.invalid && lastName.touched">{{ RequiredErrorAlert}}</div>
+    <span class="alert" class="alert" *ngIf="lastName.invalid && lastName.touched">{{ RequiredErrorAlert}}</span>
 
     <label class="label-input">Email</label>
     <input type="email" class="register-input" formControlName="email">
-    <div class="alert" class="alert" *ngIf="email.invalid && email.touched">{{ EmailErrorAlert }}</div>
+    <span class="alert" class="alert" *ngIf="email.invalid && email.touched">{{ EmailErrorAlert }}</span>
 
     <label class="label-input">Password</label>
     <input type="password" class="register-input" formControlName="password">
-    <div class="alert" class="alert" *ngIf="password.invalid && password.touched">{{ PassErrorAlert}}</div>
+    <span class="alert" class="alert" *ngIf="password.invalid && password.touched">{{ PassErrorAlert}}</span>
      
     <button type="submit" class="button-primary" [disabled]="rForm.invalid">Sign up </button>
   </form>
