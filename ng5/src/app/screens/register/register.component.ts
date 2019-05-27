@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../components/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-register',
@@ -11,36 +11,32 @@ export class RegisterComponent {
 
   rForm: FormGroup;
   post: any;
-  firstName: string = '';
-  lastName: string = '';
-  email: string = '';
-  password: string = '';
-  titleAlert: String = 'This field is required';
-  subTitle: String = 'BOOKS';
+  RequiredErrorAlert: String = 'This field is required';
+  EmailErrorAlert: String = 'This is not an Email';
+  PassErrorAlert: String = 'Password should be at least 6 characters.';
 
   constructor(private fb: FormBuilder) {
     this.rForm = fb.group({
-      'firstName': [null, Validators.required],
-      'lastName': [null, Validators.required],
-      'email': [null, Validators.compose([Validators.required, Validators.email])],
-      'password': [null, Validators.required],
+      'firstName': ['', Validators.required],
+      'lastName': ['', Validators.required],
+      'email': ['', Validators.compose([Validators.required, Validators.email])],
+      'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
     });
   }
 
+  get firstName() { return this.rForm.get('firstName'); }
+  get lastName() {return this.rForm.get('lastName')}
+  get email() { return this.rForm.get('email'); }
+  get password() { return this.rForm.get('password'); }
+
   register(post) {
-    this.firstName = post.firstName;
-    this.lastName = post.lastName;
-    this.email = post.email;
-    this.password = post.password;
-    let user: User;
-    user = {email: this.email, 
-            first_name: this.firstName, 
-            last_name: this.lastName,
-            locale: 'en',
-            password: this.password,
-            password_confirmation: this.password
-          }
-  
+    let user: User = {email: post.email, 
+                      first_name: post.firstName, 
+                      last_name: post.lastName,
+                      locale: 'en',
+                      password: post.password,
+                      password_confirmation: post.password
+                      }
     console.log({user});
   }
 }
