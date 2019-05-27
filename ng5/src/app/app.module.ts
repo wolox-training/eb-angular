@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './screens/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './screens/login/login.component';
+import { UserService } from './models/userService';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    LoginComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,7 @@ import { LoginComponent } from './screens/login/login.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
