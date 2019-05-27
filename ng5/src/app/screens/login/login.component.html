@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div class="register">
+  <img class="logo" src="assets/wolox_logo.svg" alt="Wolox logo">
+  <p class="subtitle">BOOKS</p>
+  <form [formGroup]="rForm" class="register-form" (ngSubmit)="login(rForm.value)">
+    <label class="label-input">Email</label>
+    <input type="email" class="register-input" formControlName="email">
+    <span class="alert" class="alert" *ngIf="email.invalid && email.touched">{{ EmailErrorAlert }}</span>
+
+    <label class="label-input">Password</label>
+    <input type="password" class="register-input" formControlName="password">
+    <span class="alert" class="alert" *ngIf="password.invalid && password.touched">{{ PassErrorAlert}}</span>
+     
+    <button type="submit" class="button-primary" [disabled]="rForm.invalid">Sign up </button>
+  </form>
+  <button type="button" class="button-secondary" routerLink="/sign-up">Login</button>
+</div>
