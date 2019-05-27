@@ -1,6 +1,6 @@
 import { User } from './user'; 
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
 
 export class UserService {
   
