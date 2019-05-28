@@ -10,7 +10,6 @@ import { User } from '../../models/user';
 export class RegisterComponent {
 
   rForm: FormGroup;
-  post: any;
   RequiredErrorAlert: String = 'This field is required';
   EmailErrorAlert: String = 'This is not an Email';
   PassErrorAlert: String = 'Password should be at least 6 characters.';
