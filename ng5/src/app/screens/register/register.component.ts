@@ -12,7 +12,6 @@ import { UserService } from '../../models/userService';
 export class RegisterComponent {
 
   rForm: FormGroup;
-  post: any;
   RequiredErrorAlert: String = 'This field is required';
   EmailErrorAlert: String = 'This is not an Email';
   PassErrorAlert: String = 'Password should be at least 6 characters.';
@@ -27,7 +26,7 @@ export class RegisterComponent {
   }
 
   get firstName() { return this.rForm.get('firstName'); }
-  get lastName() {return this.rForm.get('lastName')}
+  get lastName() { return this.rForm.get('lastName'); }
   get email() { return this.rForm.get('email'); }
   get password() { return this.rForm.get('password'); }
 
@@ -39,6 +38,9 @@ export class RegisterComponent {
                       password: post.password,
                       password_confirmation: post.password
                       }
-    this.userService.createUser(user, this.http);
+    this.userService.createUser(user, this.http)
+      .subscribe(res => {
+        console.log('201: Succes');
+      });
   }
 }

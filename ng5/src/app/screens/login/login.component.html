@@ -10,7 +10,7 @@
     <input type="password" class="register-input" formControlName="password">
     <span class="alert" class="alert" *ngIf="password.invalid && password.touched">{{ PassErrorAlert}}</span>
      
-    <button type="submit" class="button-primary" [disabled]="rForm.invalid">Sign up </button>
+    <button type="submit" class="button-primary" [disabled]="rForm.invalid">Login </button>
   </form>
-  <button type="button" class="button-secondary" routerLink="/sign-up">Login</button>
+  <button type="button" class="button-secondary" routerLink="/sign-up">Sign up</button>
 </div>
