@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Session } from '../../models/session';
+import { Session } from '../../../models/session';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../../models/userService';
-import { LocalStorageService } from '../../models/local-storage.service';
+import { UserService } from '../../../models/userService';
+import { LocalStorageService } from '../../../models/local-storage.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -25,8 +25,8 @@ export class LoginComponent {
     private router: Router
   ) {
     this.rForm = fb.group({
-      'email': ['', Validators.compose([Validators.required])],
-      'password': ['', Validators.compose([Validators.required])],
+      email: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.compose([Validators.required])],
     });
   }
 

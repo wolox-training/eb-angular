@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../models/user';
+import { User } from '../../../models/user';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../../models/userService';
+import { UserService } from '../../../models/userService';
 
 @Component({
   selector: 'app-register',
@@ -20,10 +20,10 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient, private userService: UserService) {
     this.rForm = fb.group({
-      'firstName': ['', Validators.required],
-      'lastName': ['', Validators.required],
-      'email': ['', Validators.compose([Validators.required, Validators.email])],
-      'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
     });
   }
 
@@ -34,12 +34,12 @@ export class RegisterComponent {
 
   register(post) {
     this.user = {email: post.email,
-                      first_name: post.firstName,
-                      last_name: post.lastName,
-                      locale: 'en',
-                      password: post.password,
-                      password_confirmation: post.password
-                      };
+                first_name: post.firstName,
+                last_name: post.lastName,
+                locale: 'en',
+                password: post.password,
+                password_confirmation: post.password
+                };
     this.userService.createUser(this.user, this.http)
       .subscribe(res => {
         console.log('201: Succes');

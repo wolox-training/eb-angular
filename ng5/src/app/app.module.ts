@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './screens/register/register.component';
-import { LoginComponent } from './screens/login/login.component'
+import { RegisterComponent } from './screens/unauth/register/register.component';
+import { LoginComponent } from './screens/unauth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './models/userService';
 import { AuthComponent } from './screens/auth/auth.component';
@@ -19,12 +19,12 @@ import { BookListComponent } from './book-list/book-list.component';
     RegisterComponent,
     LoginComponent,
     AuthComponent,
-    BookListComponent
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
