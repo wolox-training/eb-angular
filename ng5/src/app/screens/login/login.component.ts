@@ -17,7 +17,13 @@ export class LoginComponent {
   
   rForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private userService: UserService, private storage: LocalStorageService, private router: Router) {
+  constructor(
+    private fb: FormBuilder, 
+    private http: HttpClient, 
+    private userService: UserService, 
+    private storage: LocalStorageService, 
+    private router: Router
+  ) {
     this.rForm = fb.group({
       'email': ['', Validators.compose([Validators.required])],
       'password': ['', Validators.compose([Validators.required])],
