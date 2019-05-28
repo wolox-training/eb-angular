@@ -4,7 +4,7 @@ import { Session } from '../../models/session';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../models/userService';
 import { LocalStorageService } from '../../models/local-storage.service';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,14 +13,15 @@ import { Router } from "@angular/router";
 })
 
 export class LoginComponent {
-  
+
   rForm: FormGroup;
+  session: Session;
 
   constructor(
-    private fb: FormBuilder, 
-    private http: HttpClient, 
-    private userService: UserService, 
-    private storage: LocalStorageService, 
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private userService: UserService,
+    private storage: LocalStorageService,
     private router: Router
   ) {
     this.rForm = fb.group({
@@ -33,12 +34,12 @@ export class LoginComponent {
   get password() { return this.rForm.get('password'); }
 
   login(post) {
-    let session: Session = {email: post.email, 
-                            password: post.password, 
-                            }
-    this.userService.login(session, this.http)
+    this.session = {email: post.email,
+                    password: post.password,
+                    };
+    this.userService.login(this.session, this.http)
       .subscribe(res => {
-        this.storage.setValue('auth',res.access_token);
+        this.storage.setValue('auth', res.access_token);
         this.router.navigate(['/auth']);
       });
   }

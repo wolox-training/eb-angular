@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './models/userService';
 import { AuthComponent } from './screens/auth/auth.component';
 import { LocalStorageService } from './models/local-storage.service';
+import { BookListComponent } from './book-list/book-list.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LocalStorageService } from './models/local-storage.service';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AuthComponent
+    AuthComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
