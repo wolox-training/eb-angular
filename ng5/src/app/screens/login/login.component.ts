@@ -6,13 +6,12 @@ import { UserService } from '../../models/userService';
 import { LocalStorageService } from '../../models/local-storage.service';
 import { Router } from "@angular/router";
 
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent {
   
   rForm: FormGroup;

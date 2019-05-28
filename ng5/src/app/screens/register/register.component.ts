@@ -9,6 +9,7 @@ import { UserService } from '../../models/userService';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
 export class RegisterComponent {
 
   rForm: FormGroup;
