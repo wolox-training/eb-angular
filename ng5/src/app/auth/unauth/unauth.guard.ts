@@ -6,8 +6,8 @@ import { UserService } from './../../models/userService';
 export class UnauthGuard implements  CanActivate {
   constructor(
     private userServie: UserService,
-    private router: Router
-    ) {}
+    private router: Router,
+  ) {}
 
   canActivate(): boolean {
     if (!this.userServie.loggedIn()) {

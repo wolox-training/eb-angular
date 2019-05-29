@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../../../models/user';
-import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../../../models/userService';
 
 @Component({
@@ -18,7 +17,10 @@ export class RegisterComponent {
   PassErrorAlert = 'Password should be at least 6 characters.';
   user: User;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private userService: UserService) {
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService
+  ) {
     this.rForm = fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -40,7 +42,7 @@ export class RegisterComponent {
                 password: post.password,
                 password_confirmation: post.password
                 };
-    this.userService.createUser(this.user, this.http)
+    this.userService.createUser(this.user)
       .subscribe(res => {
         console.log('201: Succes');
       });
