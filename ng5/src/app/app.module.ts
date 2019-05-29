@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './screens/register/register.component';
-import { LoginComponent } from './screens/login/login.component'
+import { LoginComponent } from './screens/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './models/userService';
 import { AuthComponent } from './screens/auth/auth.component';
@@ -22,7 +22,7 @@ import { LocalStorageService } from './models/local-storage.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

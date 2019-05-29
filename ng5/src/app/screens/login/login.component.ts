@@ -9,11 +9,10 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['../container.scss']
 })
 
 export class LoginComponent {
-  
   rForm: FormGroup;
 
   constructor(
@@ -24,8 +23,8 @@ export class LoginComponent {
     private router: Router
   ) {
     this.rForm = fb.group({
-      'email': ['', Validators.compose([Validators.required])],
-      'password': ['', Validators.compose([Validators.required])],
+      email: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.compose([Validators.required])],
     });
   }
 
@@ -33,9 +32,9 @@ export class LoginComponent {
   get password() { return this.rForm.get('password'); }
 
   login(post) {
-    let session: Session = {email: post.email, 
-                            password: post.password, 
-                            }
+    const session: Session = {email: post.email,
+                            password: post.password,
+                            };
     this.userService.login(session, this.http)
       .subscribe(res => {
         this.storage.setValue('auth',res.access_token);
