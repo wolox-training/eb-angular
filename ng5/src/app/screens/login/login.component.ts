@@ -8,16 +8,15 @@ import { UserService } from '../../models/userService';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['../container.scss']
 })
 export class LoginComponent {
-  
   rForm: FormGroup;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private userService: UserService) {
     this.rForm = fb.group({
-      'email': ['', Validators.compose([Validators.required])],
-      'password': ['', Validators.compose([Validators.required])],
+      email: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.compose([Validators.required])],
     });
   }
 
@@ -25,9 +24,9 @@ export class LoginComponent {
   get password() { return this.rForm.get('password'); }
 
   login(post) {
-    let session: Session = {email: post.email, 
-                            password: post.password, 
-                            }
+    const session: Session = {email: post.email,
+                            password: post.password,
+                            };
     this.userService.login(session, this.http)
       .subscribe(res => {
         console.log(res);
