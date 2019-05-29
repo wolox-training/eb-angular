@@ -1,6 +1,6 @@
-@import 'colors.scss';
+@import '../../../sass/colors.scss';
 
-.primary-container { 
+.auth-container { 
   align-items: center; 
   background-color: $grey;
   border-top: 3px solid $blue;
