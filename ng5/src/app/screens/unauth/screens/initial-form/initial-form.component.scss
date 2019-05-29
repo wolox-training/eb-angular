@@ -1,0 +1,23 @@
+@import '../../../../../sass/colors.scss';
+
+.auth-container { 
+  align-items: center; 
+  background-color: $grey;
+  border-top: 3px solid $blue;
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto;
+  max-width: 350px;
+  padding: 10px;
+  width: 100%;
+
+  .logo {
+    height: 40px;
+    margin: 20px 20px 10px;
+  }
+
+  .subtitle { 
+    font-size: 12px;
+    letter-spacing: 8px;
+  }
+}

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../../../models/user';
-import { UserService } from '../../../../models/userService';
+import { User } from '../../../../../../models/user';
+import { UserService } from '../../../../../../models/userService';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['../container.scss']
+  styleUrls: ['./register.component.scss']
 })
 
 export class RegisterComponent {
