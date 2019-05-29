@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../../models/user';
+import { User } from '../../../../models/user';
 import { HttpClient } from '@angular/common/http';
-import { UserService } from '../../../models/userService';
+import { UserService } from '../../../../models/userService';
 
 @Component({
   selector: 'app-register',

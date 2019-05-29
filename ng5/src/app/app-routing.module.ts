@@ -1,14 +1,19 @@
+import { AuthGuard } from './auth/auth/auth.guard';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegisterComponent } from 'src/app/screens/unauth/register/register.component';
-import { LoginComponent } from 'src/app/screens/unauth/login/login.component';
+import { RegisterComponent } from 'src/app/screens/unauth/screens/register/register.component';
+import { LoginComponent } from 'src/app/screens/unauth/screens/login/login.component';
 import { AuthComponent } from 'src/app/screens/auth/auth.component';
+import { BookListComponent } from 'src/app/screens/auth/screens/book-list/book-list.component';
+import { UnauthGuard } from './auth/unauth/unauth.guard';
+
 
 const routes: Routes = [
   {
     path: '',
     component: UnauthComponent,
+    canActivate: [UnauthGuard],
     children: [
       {
         path: '',
@@ -27,7 +32,14 @@ const routes: Routes = [
   },
   {
     path: 'books',
-    component: AuthComponent
+    component: AuthComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: '',
+        component: BookListComponent
+      }
+    ]
   }
 ];
 
