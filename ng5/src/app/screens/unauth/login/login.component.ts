@@ -40,7 +40,7 @@ export class LoginComponent {
     this.userService.login(this.session, this.http)
       .subscribe(res => {
         this.storage.setValue('auth', res.access_token);
-        this.router.navigate(['/auth']);
+        this.router.navigate(['/books']);
       });
   }
 }

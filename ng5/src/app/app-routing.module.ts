@@ -1,3 +1,4 @@
+import { UnauthComponent } from './screens/unauth/unauth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from 'src/app/screens/unauth/register/register.component';
@@ -7,19 +8,25 @@ import { AuthComponent } from 'src/app/screens/auth/auth.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
+    component: UnauthComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: '/login',
+        pathMatch: 'full'
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'sign-up',
+        component: RegisterComponent
+      }
+    ]
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'sign-up',
-    component: RegisterComponent
-  },
-  {
-    path: 'auth',
+    path: 'books',
     component: AuthComponent
   }
 ];
