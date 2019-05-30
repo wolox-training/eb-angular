@@ -1,4 +1,4 @@
-import { AuthGuard } from './auth/auth/auth.guard';
+import { AuthGuard } from './authorization/auth/auth.guard';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,7 +6,7 @@ import { RegisterComponent } from 'src/app/screens/unauth/screens/initial-form/s
 import { LoginComponent } from 'src/app/screens/unauth/screens/initial-form/screens/login/login.component';
 import { AuthComponent } from 'src/app/screens/auth/auth.component';
 import { BookListComponent } from 'src/app/screens/auth/screens/book-list/book-list.component';
-import { UnauthGuard } from './auth/unauth/unauth.guard';
+import { UnauthGuard } from './authorization/unauth/unauth.guard';
 import { InitialFormComponent } from 'src/app/screens/unauth/screens/initial-form/initial-form.component';
 
 

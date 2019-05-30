@@ -12,8 +12,8 @@ import { AuthComponent } from './screens/auth/auth.component';
 import { LocalStorageService } from './models/local-storage.service';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
-import { AuthGuard } from './auth/auth/auth.guard';
-import { UnauthGuard } from './auth/unauth/unauth.guard';
+import { AuthGuard } from './authorization/auth/auth.guard';
+import { UnauthGuard } from './authorization/unauth/unauth.guard';
 import { InitialFormComponent } from './screens/unauth/screens/initial-form/initial-form.component';
 
 
