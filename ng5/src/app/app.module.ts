@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './screens/unauth/screens/initial-form/screens/register/register.component';
 import { LoginComponent } from './screens/unauth/screens/initial-form/screens/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './models/userService';
 import { AuthComponent } from './screens/auth/auth.component';
 import { LocalStorageService } from './models/local-storage.service';
@@ -15,6 +15,8 @@ import { UnauthComponent } from './screens/unauth/unauth.component';
 import { AuthGuard } from './authorization/auth/auth.guard';
 import { UnauthGuard } from './authorization/unauth/unauth.guard';
 import { InitialFormComponent } from './screens/unauth/screens/initial-form/initial-form.component';
+import { TokenInterceptorService } from './authorization/token-interceptor/token-interceptor.service';
+import { BookService } from './models/book.service';
 
 
 
@@ -33,13 +35,19 @@ import { InitialFormComponent } from './screens/unauth/screens/initial-form/init
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     UserService,
     LocalStorageService,
     AuthGuard,
-    UnauthGuard
+    UnauthGuard,
+    BookService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
