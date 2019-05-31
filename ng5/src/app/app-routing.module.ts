@@ -8,6 +8,8 @@ import { AuthComponent } from 'src/app/screens/auth/auth.component';
 import { BookListComponent } from 'src/app/screens/auth/screens/book-list/book-list.component';
 import { UnauthGuard } from './authorization/unauth/unauth.guard';
 import { InitialFormComponent } from 'src/app/screens/unauth/screens/initial-form/initial-form.component';
+import { BookDetailComponent } from '../app/screens/auth/screens/book-list/screens/book-detail/book-detail.component';
+
 
 
 
@@ -45,7 +47,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: BookListComponent
+        component: BookListComponent,
+      },
+      {
+        path: ':id',
+        component: BookDetailComponent
       }
     ]
   }
