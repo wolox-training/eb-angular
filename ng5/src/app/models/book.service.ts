@@ -13,4 +13,8 @@ export class BookService {
   getBooks() {
     return this.http.get<any>(this.userBaseEndpoint, {});
   }
+
+  getBookById(id: string) {
+    return this.http.get<any>(this.userBaseEndpoint + '/' + id, {});
+  }
 }

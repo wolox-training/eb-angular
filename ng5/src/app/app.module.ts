@@ -17,7 +17,7 @@ import { UnauthGuard } from './authorization/unauth/unauth.guard';
 import { InitialFormComponent } from './screens/unauth/screens/initial-form/initial-form.component';
 import { TokenInterceptorService } from './authorization/token-interceptor/token-interceptor.service';
 import { BookService } from './models/book.service';
-import { BookDetailComponent } from '../app/screens/auth/screens/book-list/screens/book-detail/book-detail.component';
+import { BookDetailComponent } from './screens/auth/screens/book-detail/book-detail.component';
 
 
 
