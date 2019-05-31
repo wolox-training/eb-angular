@@ -1,6 +1,6 @@
 @import '../../../sass/colors.scss';
 
-.register { 
+.auth-container { 
   align-items: center; 
   background-color: $grey;
   border-top: 3px solid $blue;
@@ -28,7 +28,7 @@
   }
 }
 
-.register-form {
+.container-form {
   border-bottom: 3px solid $grey-soft;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
   }
 }
 
-.register-input {
+.container-input {
   border-radius: 10px;
   font-size: 15px;
   height: 40px;
