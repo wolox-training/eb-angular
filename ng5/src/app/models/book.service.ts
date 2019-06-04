@@ -4,17 +4,17 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BookService {
-  userBaseEndpoint: string = environment.WBOOK_SERVICE + '/api/v1/books';
+  booksBaseEndpoint: string = environment.WBOOK_SERVICE + '/api/v1/books';
 
   constructor(
     private http: HttpClient
   ) {}
 
   getBooks() {
-    return this.http.get<any>(this.userBaseEndpoint, {});
+    return this.http.get<any>(this.booksBaseEndpoint, {});
   }
 
   getBookById(id: string) {
-    return this.http.get<any>(this.userBaseEndpoint + '/' + id, {});
+    return this.http.get<any>(this.booksBaseEndpoint + '/' + id, {});
   }
 }

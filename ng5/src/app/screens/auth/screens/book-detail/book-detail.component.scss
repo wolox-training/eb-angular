@@ -1,24 +1,51 @@
 @import '../../../../../sass/colors.scss';
 
-:host {
-  background-color: $grey-soft-secundary;
-}
-
 .book-container {
+  background-color: $white;
+  box-shadow: 5px 7px 5px 0px $grey-secundary;
   display: flex;
-  padding: 200px;
-  
+  justify-content: center;
+  margin: 200px auto;
+
   .book-logo {
-    height: 400px;
-    width: 300px;
+    height: 300px;
+    margin: 20px;
+    width: 200px;
   }
 }
 
 .book-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px;
+}
 
-  .book-tittle {
+.book-title {
+  border-bottom: 3px solid $green;
+  font-size: 30px;
+  padding: 5px 5px;
+  width: 600px;
 
+  .book-subtitle{
+    color: #646363;
+    font-size: 16px;
+  }
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+
+  .book-detail {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+
+    .sub-detail {
+      color: #646363;
+      font-size: 16px;
+    }
   }
 }

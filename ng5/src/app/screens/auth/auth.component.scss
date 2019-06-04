@@ -1,5 +1,12 @@
 @import '../../../sass/colors.scss';
 
+.auth-component {
+  background-color: $grey-soft-secundary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav {
   align-items: center;
   background-color: $white;
@@ -10,6 +17,7 @@
   justify-content: space-around;
   padding: 5px 20px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
   

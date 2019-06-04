@@ -1,9 +1,11 @@
 <div class="book-container">
-  <img src="{{img}}" class="book-logo">
+  <img [src]="img || 'assets/wolox_logo.svg'" class="book-logo">
   <div class="book-info">
-    <h1 class="book-title"><p>{{title}}</p>({{genre}})</h1>
-    <h3>Book author: <p>{{author}}</p></h3>
-    <h3>Publisher: <p>{{publisher}}</p></h3>
-    <h3>Year of publication: <p>{{year}}</p></h3>
+    <h1 class="book-title">{{title}} <p class="book-subtitle">({{genre}})</p></h1>
+    <div class="book-details">
+      <h3 class="book-detail">Book author: <p class="sub-detail">{{author}}</p></h3>
+      <h3 class="book-detail">Publisher: <p class="sub-detail">{{publisher}}</p></h3>
+      <h3 class="book-detail">Year of publication: <p class="sub-detail">{{year}}</p></h3>
+    </div>
   </div>
 </div>
