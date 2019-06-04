@@ -1,0 +1,7 @@
+<div class="books-container">
+  <div class="book" *ngFor="let book of books">
+    <img class="book-logo" [src]="book.image_url || 'assets/wolox_logo.svg'" alt="{{book.title}} logo">
+    <h3 class="book-title">{{book.title}}</h3>
+    <h4 class="book-author">{{book.author}}</h4>
+  </div>
+</div>

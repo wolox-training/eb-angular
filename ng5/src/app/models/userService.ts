@@ -25,4 +25,8 @@ export class UserService {
   loggedIn() {
     return !! this.storage.getValue('auth');
   }
+
+  getToken() {
+    return this.storage.getValue('auth');
+  }
 }
