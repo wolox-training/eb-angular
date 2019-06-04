@@ -1,3 +1,24 @@
+@import '../../../../../sass/colors.scss';
+
+:host {
+  background-color: $grey-soft-secundary;
+}
+
 .book-container {
-    margin: 200px;
+  display: flex;
+  padding: 200px;
+  
+  .book-logo {
+    height: 400px;
+    width: 300px;
+  }
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+
+  .book-tittle {
+
+  }
 }
