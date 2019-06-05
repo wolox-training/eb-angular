@@ -1,11 +1,9 @@
 <div class="book-container">
-  <img [src]="img || 'assets/wolox_logo.svg'" class="book-logo">
-  <div class="book-info">
-    <h1 class="book-title">{{title}} <p class="book-subtitle">({{genre}})</p></h1>
-    <div class="book-details">
-      <h3 class="book-detail">Book author: <p class="sub-detail">{{author}}</p></h3>
-      <h3 class="book-detail">Publisher: <p class="sub-detail">{{publisher}}</p></h3>
-      <h3 class="book-detail">Year of publication: <p class="sub-detail">{{year}}</p></h3>
-    </div>
+  <img *ngIf="book" [src]="book.image_url || 'assets/wolox_logo.svg'" class="book-logo">
+  <div *ngIf="book" class="book-info">
+    <h1 class="book-title">{{book.title}} <span class="book-subtitle">({{book.genre}})</span></h1>
+    <h3 class="book-detail">Book author: <span class="sub-detail">{{book.author}}</span></h3>
+    <h3 class="book-detail">Publisher: <span class="sub-detail">{{book.publisher}}</span></h3>
+    <h3 class="book-detail">Year of publication: <span class="sub-detail">{{book.year}}</span></h3>
   </div>
 </div>

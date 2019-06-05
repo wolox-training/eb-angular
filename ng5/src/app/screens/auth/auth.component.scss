@@ -1,6 +1,6 @@
 @import '../../../sass/colors.scss';
 
-.auth-component {
+:host {
   background-color: $grey-soft-secundary;
   display: flex;
   align-items: center;
