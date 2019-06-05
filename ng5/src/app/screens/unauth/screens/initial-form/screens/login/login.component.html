@@ -1,11 +1,11 @@
 <form [formGroup]="rForm" class="container-form" (ngSubmit)="login(rForm.value)">
-  <label class="label-input">Email</label>
+  <label class="label-input" i18n>Email</label>
   <input type="email" class="container-input" formControlName="email">
 
-  <label class="label-input">Password</label>
+  <label class="label-input" i18n>Password</label>
   <input type="password" class="container-input" formControlName="password">
     
-  <button type="submit" class="button-primary" [disabled]="rForm.invalid">Login </button>
+  <button type="submit" class="button-primary" [disabled]="rForm.invalid" i18n>Login </button>
 </form>
-<button type="button" class="button-secondary" routerLink="/sign-up">Sign up</button>
+<button type="button" class="button-secondary" routerLink="/sign-up" i18n>Sign up</button>
 

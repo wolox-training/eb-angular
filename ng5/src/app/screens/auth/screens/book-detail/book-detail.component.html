@@ -2,8 +2,8 @@
   <img *ngIf="book" [src]="book.image_url || 'assets/wolox_logo.svg'" class="book-logo">
   <div *ngIf="book" class="book-info">
     <h1 class="book-title">{{book.title}} <span class="book-subtitle">({{book.genre}})</span></h1>
-    <h3 class="book-detail">Book author: <span class="sub-detail">{{book.author}}</span></h3>
-    <h3 class="book-detail">Publisher: <span class="sub-detail">{{book.publisher}}</span></h3>
-    <h3 class="book-detail">Year of publication: <span class="sub-detail">{{book.year}}</span></h3>
+    <h3 class="book-detail" i18n>Book author: <span class="sub-detail">{{book.author}}</span></h3>
+    <h3 class="book-detail" i18n>Publisher: <span class="sub-detail">{{book.publisher}}</span></h3>
+    <h3 class="book-detail" i18n>Year of publication: <span class="sub-detail">{{book.year}}</span></h3>
   </div>
 </div>
