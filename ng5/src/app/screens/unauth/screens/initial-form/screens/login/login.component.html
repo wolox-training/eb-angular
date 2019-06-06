@@ -8,4 +8,5 @@
   <button type="submit" class="button-primary" [disabled]="rForm.invalid" i18n>Login </button>
 </form>
 <button type="button" class="button-secondary" routerLink="/sign-up" i18n>Sign up</button>
+<span class="alert" class="alert" *ngIf="ErrorAlert">{{  ErrorAlert }}</span>
 

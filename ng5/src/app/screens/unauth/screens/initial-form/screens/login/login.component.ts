@@ -15,6 +15,7 @@ export class LoginComponent {
 
   rForm: FormGroup;
   session: Session;
+  ErrorAlert: string;
 
   constructor(
     private fb: FormBuilder,
@@ -39,6 +40,9 @@ export class LoginComponent {
       .subscribe(res => {
         this.storage.setValue('auth', res.access_token);
         this.router.navigate(['/books']);
+        this.ErrorAlert = null;
+      }, err => {
+        this.ErrorAlert = err.error.error;
       });
   }
 }
