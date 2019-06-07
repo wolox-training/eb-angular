@@ -61,6 +61,13 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "es": {
+              "aot": true,
+              "outputPath": "dist/ng5-es/",
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es"
             }
           }
         },
@@ -72,6 +79,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ng5:build:production"
+            },
+            "es": {
+              "browserTarget": "ng5:build:es"
             }
           }
         },

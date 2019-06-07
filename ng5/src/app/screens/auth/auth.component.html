@@ -1,8 +1,8 @@
 <nav class="nav">
-  <div class="logo-container">
+  <div class="logo-container" [routerLink]="['/books']">
     <img class="navbar-logo" src="assets/wolox_logo.svg" alt="Wolox logo">
-    <P class="subtitle">BOOKS</P>
+    <P class="subtitle" i18n>BOOKS</P>
   </div>  
-  <button class="navbar-button" (click)="logOut()">Logout</button>
+  <button class="navbar-button" (click)="logOut()" i18n>Logout</button>
 </nav>
 <router-outlet></router-outlet>
